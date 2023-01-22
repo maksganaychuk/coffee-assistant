@@ -1,0 +1,4 @@
+export const INIT = 'REQUEST_PHASE_INIT';
+export const LOADING = 'REQUEST_PHASE_LOADING';
+export const SUCCESS = 'REQUEST_PHASE_SUCCESS';
+export const FAILURE = 'REQUEST_PHASE_FAILURE';

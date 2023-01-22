@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-promise-executor-return": "off",
+    "default-param-last": "off",
+    "object-curly-newline": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "no-undef": "warn",
+    "camelcase": "off",
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak": "off",
+    "no-unused-vars": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/function-component-definition": "off",
+    "semi": ["warn", "always"],
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
+    "react/jsx-indent": ["warn", 2],
+    "react/jsx-indent-props": ["warn", 2],
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "max-len": ["warn", { "code": 110 }],
+    "spaced-comment": ["warn", "always", { "markers": ["/"] }],
+    "arrow-parens": ["warn", "as-needed"],
+    "eol-last": "warn",
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "variables": false }
+    ]
+  }
+}
