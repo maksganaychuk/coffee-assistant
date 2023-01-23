@@ -15,7 +15,7 @@ const Coffee = () => {
     browserSupportsSpeechRecognition,
   } = useSpeechRecognition();
 
-  const { getCoffeeListPhase, pagination } = useSelector(store => store.coffeeStore);
+  const { getCoffeeListPhase } = useSelector(store => store.coffeeStore);
 
   const [search, setSearch] = useState('');
   const [selectedFilter, setSelectedFilter] = useState(1);
@@ -34,16 +34,6 @@ const Coffee = () => {
     setSelectedFilter(filter);
   };
 
-  const handleClickLoadMore = () => {
-    dispatch(
-      getCoffeeList({
-        search: debouncedInput,
-        page: pagination.page + 1,
-        pageSize: 6,
-      }),
-    );
-  };
-
   useEffect(() => {
     setSearch(transcript);
   }, [listening]);
@@ -51,12 +41,10 @@ const Coffee = () => {
   useEffect(() => {
     dispatch(
       getCoffeeList({
-        search: debouncedInput,
-        page: 1,
-        pageSize: 6,
+        ...(debouncedInput && { search: debouncedInput, filterId: selectedFilter }),
       }),
     );
-  }, [debouncedInput]);
+  }, [debouncedInput, selectedFilter]);
 
   const isLoading = getCoffeeListPhase === LOADING;
 
@@ -68,7 +56,6 @@ const Coffee = () => {
       isLoading={isLoading}
       onSearchInputChange={handleSearchInputChange}
       search={search}
-      onClickLoadMore={handleClickLoadMore}
       filters={[
         { id: 1, title: 'Name' },
         { id: 2, title: 'Recipe' },

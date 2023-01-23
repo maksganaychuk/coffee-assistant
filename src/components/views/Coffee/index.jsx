@@ -28,7 +28,14 @@ const Coffee = ({
   };
 
   return (
-    <Flex maxWidth={1200} flexGrow={1} width="100%" pt={50} px={[40, 70, 100]} flexDirection="column">
+    <Flex
+      minHeight="100vh"
+      maxWidth={1200}
+      width="100%"
+      pt={50}
+      px={[40, 70, 100]}
+      flexDirection="column"
+    >
       <Typography alignSelf="start" variant="garamond-500" fontSize={[30, 45, 56]} mb={[20, 30, 40]}>
         Find your coffee
       </Typography>

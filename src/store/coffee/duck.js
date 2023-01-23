@@ -22,29 +22,7 @@ export const getCoffeeList = data => async dispatch => {
 export const coffeeStoreWhitelist = [];
 
 const initialState = {
-  coffeeList: [
-    {
-      name: 'Arabika',
-      volume: 3,
-      strength: 5,
-      kilocalories: 20,
-      tastes: [{ name: 'Salty' }],
-      ingredients: [
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-        { name: 'Coffee seed' },
-      ],
-      recipe: 'Some very very very very very very very loooooong recipe',
-    },
-  ],
-
-  pagination: {},
+  coffeeList: [],
 
   getCoffeeListPhase: INIT,
   getCoffeeListError: null,
