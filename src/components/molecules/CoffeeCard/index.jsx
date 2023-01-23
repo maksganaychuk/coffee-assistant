@@ -15,7 +15,7 @@ const CoffeeCard = ({ imageUrl, name, recipe, strength, volume, kilocalories, in
     </Flex>
   ));
 
-  const tastesBlock = tastes.map(({ tasteName }, index) => (
+  const tastesBlock = tastes.map(({ name: tasteName }, index) => (
     <Flex mr="3px" alignItems="center" key={tasteName}>
       <Typography variant="proximaNova-400" fontSize={[10, 12, 14, 16]}>
         {index === tastes.length - 1 ? tasteName : `${tasteName},`}
