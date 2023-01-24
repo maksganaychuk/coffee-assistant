@@ -1,4 +1,5 @@
 import React from 'react';
+import Siriwave from 'react-siriwave';
 import { string } from 'prop-types';
 
 import { Flex, Typography } from '@mixins';
@@ -10,11 +11,12 @@ const SpeechModal = ({
   <Flex
     id="background"
     top={0}
+    pt={150}
     left={0}
     right={0}
     bottom={0}
     zIndex={10}
-    justifyContent="center"
+    justifyContent="start"
     alignItems="center"
     flexDirection="column"
     position="fixed"
@@ -23,6 +25,7 @@ const SpeechModal = ({
     <Typography mb={20} variant="proximaNova-600" fontSize={55} color={theme.color.milk}>
       What are you looking for?
     </Typography>
+    <Siriwave speed={0.1} />
     <Typography variant="garamond-500" fontSize={50} color={theme.color.white}>{transcript}</Typography>
   </Flex>
 );

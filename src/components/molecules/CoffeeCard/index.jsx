@@ -40,7 +40,7 @@ const CoffeeCard = ({ imageUrl, name, recipe, strength, volume, kilocalories, in
         width="35%"
         maxHeight={[180, 180, 180, 195]}
       />
-      <Flex mr={10} flexDirection="column" justifyContent="space-between">
+      <Flex mr={10} width="63%" flexDirection="column" justifyContent="space-between">
         <Flex flexDirection="column">
           <Flex mb="5px" alignItems="center">
             <Typography mr={['8px', '8px', 10, 12]} variant="proximaNova-600" fontSize={[14, 16, 18, 20]}>
@@ -50,19 +50,19 @@ const CoffeeCard = ({ imageUrl, name, recipe, strength, volume, kilocalories, in
               {`${kilocalories} kkal`}
             </Typography>
           </Flex>
-          <Flex mb="5px" flexWrap="wrap" alignItems="center">
+          <Flex mb="5px" flexWrap="wrap" alignItems="start">
             <Typography mr="5px" variant="proximaNova-600" fontSize={[10, 12, 14, 16]}>
               Ingredients:
             </Typography>
             {ingredientsBlock}
           </Flex>
-          <Flex flexWrap="wrap" alignItems="center">
+          <Flex flexWrap="wrap" alignItems="start">
             <Typography mr="5px" variant="proximaNova-600" fontSize={[10, 12, 14, 16]}>
               Tastes:
             </Typography>
             {tastesBlock}
           </Flex>
-          <Flex mb={20} alignItems="center" mt="5px">
+          <Flex mb={20} alignItems="start" mt="5px">
             <Typography mr="5px" variant="proximaNova-600" fontSize={[10, 12, 14, 16]}>
               Recipe:
             </Typography>
