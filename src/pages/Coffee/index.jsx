@@ -42,7 +42,9 @@ const Coffee = () => {
   useEffect(() => {
     dispatch(
       getCoffeeList({
-        ...(debouncedInput && { search: debouncedInput, filterId: selectedFilter }),
+        ...(debouncedInput && { search: selectedFilter === 5
+          ? parseInt(debouncedInput, 10) : debouncedInput,
+        filterId: selectedFilter }),
       }),
     );
   }, [debouncedInput, selectedFilter]);
@@ -62,6 +64,7 @@ const Coffee = () => {
         { id: 2, title: 'Recipe' },
         { id: 3, title: 'Ingredients' },
         { id: 4, title: 'Tastes' },
+        { id: 5, title: 'Strength' },
       ]}
       onFilterSelect={handleFilterSelect}
       selectedFilter={selectedFilter}
