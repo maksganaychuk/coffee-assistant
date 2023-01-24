@@ -26,7 +26,7 @@ const CoffeeList = () => {
     [coffeeList],
   );
 
-  return coffeeBlock?.length ? (
+  return coffeeList?.length ? (
     coffeeBlock
   ) : (
     <Flex width="100%" alignItems="center" flexDirection="column">

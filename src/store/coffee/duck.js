@@ -12,7 +12,7 @@ export const getCoffeeList = data => async dispatch => {
 
     const response = await api.getCoffeeList(data);
 
-    return dispatch(getCoffeeListRoutine.success(response.data));
+    return dispatch(getCoffeeListRoutine.success(response));
   } catch (error) {
     return dispatch(getCoffeeListRoutine.failure(error.response));
   }
