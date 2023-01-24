@@ -32,6 +32,7 @@ const Coffee = () => {
 
   const handleFilterSelect = filter => {
     setSelectedFilter(filter);
+    setSearch('');
   };
 
   useEffect(() => {
