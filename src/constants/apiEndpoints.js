@@ -1,5 +1,5 @@
 const apiEndpoints = {
-  coffee: 'api/coffee',
+  coffee: 'coffees',
 };
 
 export default apiEndpoints;
